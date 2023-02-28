@@ -10,6 +10,12 @@ require("mason").setup({
 
 require("mason-lspconfig").setup({
   ensure_installed = {
-    "lua_ls"
+    "lua_ls",
+    "gopls",
+    "pylsp",
   },
 })
+
+require("lspconfig").lua_ls.setup {}
+require("lspconfig").pylsp.setup {}
+require("lspconfig").gopls.setup {}
