@@ -13,22 +13,51 @@ vim.api.nvim_create_autocmd("BufEnter", {
 })
 
 -- auto open https://github.com/nvim-tree/nvim-tree.lua/wiki/Open-At-Startup 
-local function open_nvim_tree()
+local function open_nvim_tree(data)
+
+  -- buffer is a directory
+  local directory = vim.fn.isdirectory(data.file) == 1
+
+  if not directory then
+    return
+  end
+
+  vim.cmd.cd(data.file)
+
   require("nvim-tree.api").tree.open()
+
 end
 
 vim.api.nvim_create_autocmd({ "VimEnter" }, { callback = open_nvim_tree })
 
 -- empty setup using defaults
 require("nvim-tree").setup({
+  hijack_cursor = true,
   sort_by = "case_sensitive",
   git = {
-    enable = false
+    enable = true,
   },
   view = {
     width = 40,
   },
   renderer = {
     group_empty = true,
+    icons = {
+      show = {
+        file = false,
+        folder = false
+      }
+    }
   },
+  on_attach = function(bufnr)
+    local bufmap = function(lhs, rhs, desc)
+      vim.keymap.set('n', lhs, rhs, {buffer = bufnr, desc = desc})
+    end
+
+    local api = require('nvim-tree.api')
+    bufmap('x', api.node.navigate.parent_close, 'Close parent folder')
+    bufmap('c', api.fs.create, 'Create node')
+    bufmap('<cr>', api.node.open.edit, 'Expand folder or go to file')
+  end
+
 })

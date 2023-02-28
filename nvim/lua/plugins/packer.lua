@@ -17,6 +17,7 @@ return require('packer').startup(function(use)
   use 'nvim-lualine/lualine.nvim'             -- status line
   use 'nvim-tree/nvim-tree.lua'               -- file navigation
   use 'nvim-treesitter/nvim-treesitter'       -- hilight
+  use 'f-person/git-blame.nvim'               -- git blame 
   use {
     'nvim-telescope/telescope.nvim',          -- file searching & global grep
     requires = { {'nvim-lua/plenary.nvim'} }

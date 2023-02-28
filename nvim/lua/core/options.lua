@@ -24,3 +24,5 @@ vim.g.gruvbox_dark_sidebar = false
 vim.g.gruvbox_italic_comments = false
 vim.g.gruvbox_italic_keywords = false
 vim.cmd([[colorscheme gruvbox-flat]])
+
+
