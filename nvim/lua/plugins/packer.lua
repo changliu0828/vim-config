@@ -13,14 +13,12 @@ local packer_bootstrap = ensure_packer()
 
 return require('packer').startup(function(use)
   use 'wbthomason/packer.nvim'
-  -- use 'ellisonleao/gruvbox.nvim'              -- gruvbox theme
-  -- use 'sainnhe/gruvbox-material'
-  use 'eddyekofo94/gruvbox-flat.nvim'
-  use 'nvim-lualine/lualine.nvim'
-  use 'nvim-tree/nvim-tree.lua'
-  use 'nvim-treesitter/nvim-treesitter'
+  use 'eddyekofo94/gruvbox-flat.nvim'         -- theme
+  use 'nvim-lualine/lualine.nvim'             -- status line
+  use 'nvim-tree/nvim-tree.lua'               -- file navigation
+  use 'nvim-treesitter/nvim-treesitter'       -- hilight
   use {
-    'nvim-telescope/telescope.nvim',
+    'nvim-telescope/telescope.nvim',          -- file searching & global grep
     requires = { {'nvim-lua/plenary.nvim'} }
   }
   use {                                       -- lsp
