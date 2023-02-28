@@ -13,6 +13,7 @@ require("mason-lspconfig").setup({
     "lua_ls",
     "gopls",
     "pylsp",
+    "kotlin_language_server",
   },
 })
 
@@ -27,3 +28,4 @@ require("lspconfig").lua_ls.setup {
 }
 require("lspconfig").pylsp.setup {}
 require("lspconfig").gopls.setup {}
+require("lspconfig").kotlin_language_server.setup {}
