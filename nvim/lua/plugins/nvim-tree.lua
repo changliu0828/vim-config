@@ -13,7 +13,7 @@ vim.api.nvim_create_autocmd("BufEnter", {
 })
 
 -- auto open https://github.com/nvim-tree/nvim-tree.lua/wiki/Open-At-Startup 
-local function open_nvim_tree(data)
+local function open_nvim_tree()
   require("nvim-tree.api").tree.open()
 end
 
@@ -27,5 +27,8 @@ require("nvim-tree").setup({
   },
   view = {
     width = 40,
-  }
+  },
+  renderer = {
+    group_empty = true,
+  },
 })

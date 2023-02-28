@@ -11,19 +11,14 @@ end
 
 local packer_bootstrap = ensure_packer()
 
--- auto PackerSync on save
-vim.cmd([[
-  augroup packer_user_config
-    autocmd!
-    autocmd BufWritePost packer.lua source <afile> | PackerSync
-  augroup end
-]])
-
 return require('packer').startup(function(use)
   use 'wbthomason/packer.nvim'
-  use 'ellisonleao/gruvbox.nvim'              -- gruvbox theme
+  -- use 'ellisonleao/gruvbox.nvim'              -- gruvbox theme
+  -- use 'sainnhe/gruvbox-material'
+  use 'eddyekofo94/gruvbox-flat.nvim'
   use 'nvim-lualine/lualine.nvim'
   use 'nvim-tree/nvim-tree.lua'
+  use 'nvim-treesitter/nvim-treesitter'
   use {
     'nvim-telescope/telescope.nvim',
     requires = { {'nvim-lua/plenary.nvim'} }
