@@ -1,5 +1,5 @@
 -- disable netrw at the very start of your init.lua (strongly advised)
-vim.g.loaded_netrw = 1
+-- vim.g.loaded_netrw = 1
 vim.g.loaded_netrwPlugin = 1
 
 -- auto close https://github.com/nvim-tree/nvim-tree.lua/wiki/Auto-Close
@@ -45,9 +45,22 @@ require("nvim-tree").setup({
     icons = {
       show = {
         file = false,
-        folder = false
-      }
+        folder = true
+      },
+      folder = {
+        arrow_open = "",
+				arrow_closed = "",
+				default = "",
+				open = "",
+        empty = "",
+			  empty_open = "",
+			  symlink = "",
+				symlink_open = "",
+		  },
     }
+  },
+  update_focused_file = {
+    enable = true,
   },
   on_attach = function(bufnr)
     local bufmap = function(lhs, rhs, desc)
