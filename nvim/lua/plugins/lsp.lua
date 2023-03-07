@@ -43,12 +43,19 @@ local on_attach = function(client, bufnr)
   vim.keymap.set('n', '<space>f', function() vim.lsp.buf.format { async = true } end, bufopts)
 end
 
+local capabilities = require('cmp_nvim_lsp').default_capabilities()
+
 require("lspconfig").pylsp.setup {
-  on_attach = on_attach
+  on_attach = on_attach,
+  capabilities = capabilities,
 }
 require("lspconfig").gopls.setup {
-  on_attach = on_attach
+  on_attach = on_attach,
+  capabilities = capabilities,
 }
 require("lspconfig").kotlin_language_server.setup {
-  on_attach = on_attach
+  on_attach = on_attach,
+  capabilities = capabilities,
 }
+
+

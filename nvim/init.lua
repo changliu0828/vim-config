@@ -5,6 +5,7 @@ require("plugins.nvim-tree")
 require("plugins.telescope")
 require("plugins.treesitter")
 require("plugins.git-blame")
+require("plugins.cmp")
 
 require("core.options")
 require("core.keymaps")

@@ -18,6 +18,8 @@ return require('packer').startup(function(use)
   use 'nvim-tree/nvim-tree.lua'               -- file navigation
   use 'nvim-treesitter/nvim-treesitter'       -- hilight
   use 'f-person/git-blame.nvim'               -- git blame 
+  use 'hrsh7th/nvim-cmp'                      -- completion
+  use 'hrsh7th/cmp-nvim-lsp'                  -- completion
   use {
     'tpope/vim-fugitive',
     requires = { {'tpope/vim-rhubarb'} }
