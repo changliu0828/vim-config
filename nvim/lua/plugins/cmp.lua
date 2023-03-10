@@ -18,9 +18,10 @@ cmp.setup ({
       "s",
     }),
   }),
-  sources = {
-    { name = 'nvim_lsp' },
-    { name = 'buffer' },
-    { name = 'path' },
-  }
+  sources = cmp.config.sources({
+      { name = 'nvim_lsp' },
+      { name = 'path' },
+    }, {
+      { name = 'buffer' },
+    })
 })

@@ -18,7 +18,9 @@ return require('packer').startup(function(use)
   use 'nvim-tree/nvim-tree.lua'               -- file navigation
   use 'nvim-treesitter/nvim-treesitter'       -- hilight
   use 'hrsh7th/nvim-cmp'                      -- completion
-  use 'hrsh7th/cmp-nvim-lsp'                  -- completion
+  use 'hrsh7th/cmp-nvim-lsp'                  -- lsp completion
+  use 'hrsh7th/cmp-path'                      -- path completion
+  use 'hrsh7th/cmp-buffer'                    -- buffer completion
   use 'simrat39/symbols-outline.nvim'         -- outline
   use {
     'tpope/vim-fugitive',
