@@ -9,7 +9,7 @@ vim.opt.foldenable = true
 vim.opt.foldmethod = 'indent'
 vim.opt.foldlevel = 999
 
-vim.opt.wrap = false
+vim.opt.wrap = true 
 vim.opt.cursorline = true
 vim.opt.mouse = ''                          -- disable mouse to enable iterm copy on selection
 vim.opt.clipboard:append("unnamedplus")

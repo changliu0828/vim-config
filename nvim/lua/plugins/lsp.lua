@@ -13,7 +13,7 @@ require("mason-lspconfig").setup({
     "lua_ls",
     "gopls",
     "pylsp",
-    "kotlin_language_server",
+    "html",
   },
 })
 
@@ -57,5 +57,8 @@ require("lspconfig").kotlin_language_server.setup {
   on_attach = on_attach,
   capabilities = capabilities,
 }
-
+require("lspconfig").html.setup {
+  on_attach = on_attach,
+  capabilities = capabilities,
+}
 

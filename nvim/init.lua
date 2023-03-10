@@ -6,6 +6,7 @@ require("plugins.telescope")
 require("plugins.treesitter")
 require("plugins.git-blame")
 require("plugins.cmp")
+require("plugins.symbols-outline")
 
 require("core.options")
 require("core.keymaps")
