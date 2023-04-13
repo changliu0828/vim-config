@@ -14,7 +14,7 @@ require("mason-lspconfig").setup({
     "gopls",
     "pyright",
     "html",
-    "sqls",
+    "sqlls",
   },
 })
 
@@ -37,11 +37,11 @@ local on_attach = function(client, bufnr)
   -- Mappings.
   -- See `:help vim.lsp.*` for documentation on any of the below functions
   local bufopts = { noremap=true, silent=true, buffer=bufnr }
-  vim.keymap.set('n', '<leader>D', vim.lsp.buf.declaration, bufopts)
-  vim.keymap.set('n', '<leader>d', vim.lsp.buf.definition, bufopts)
-  vim.keymap.set('n', '<leader>i', vim.lsp.buf.implementation, bufopts)
-  vim.keymap.set('n', '<leader>r', vim.lsp.buf.references, bufopts)
-  vim.keymap.set('n', '<space>f', function() vim.lsp.buf.format { async = true } end, bufopts)
+  vim.keymap.set('n', 'gD', vim.lsp.buf.declaration, bufopts)
+  vim.keymap.set('n', 'gd', vim.lsp.buf.definition, bufopts)
+  vim.keymap.set('n', 'gi', vim.lsp.buf.implementation, bufopts)
+  vim.keymap.set('n', 'gr', vim.lsp.buf.references, bufopts)
+  vim.keymap.set('n', 'gf', function() vim.lsp.buf.format { async = true } end, bufopts)
 end
 
 local capabilities = require('cmp_nvim_lsp').default_capabilities()
@@ -62,7 +62,7 @@ require("lspconfig").html.setup {
   on_attach = on_attach,
   capabilities = capabilities,
 }
-require("lspconfig").sqls.setup {
+require("lspconfig").sqlls.setup {
   on_attach = on_attach,
   capabilities = capabilities,
 }

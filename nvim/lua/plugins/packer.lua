@@ -22,6 +22,7 @@ return require('packer').startup(function(use)
   use 'hrsh7th/cmp-path'                      -- path completion
   use 'hrsh7th/cmp-buffer'                    -- buffer completion
   use 'simrat39/symbols-outline.nvim'         -- outline
+  use 'github/copilot.vim'                    -- copilot
   use {
     'tpope/vim-fugitive',
     requires = { {'tpope/vim-rhubarb'} }
