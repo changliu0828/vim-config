@@ -7,3 +7,4 @@ vim.keymap.set('n', '<leader>b', require('telescope.builtin').buffers, {})
 vim.keymap.set('n', '<leader>gb', ":Git blame<CR>")
 vim.keymap.set({'n', 'v'}, '<leader>gg', ":GBrowse<CR>")
 vim.keymap.set('n', '<space>', "za")
+vim.keymap.set('n', 'd', '"_d', { noremap = true }) -- make delete without copy
