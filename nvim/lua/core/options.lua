@@ -23,9 +23,7 @@ vim.opt.signcolumn = "yes"
 
 -- theme
 vim.o.background = "dark"                  -- light/dark
-vim.g.gruvbox_dark_sidebar = false
-vim.g.gruvbox_italic_comments = false
-vim.g.gruvbox_italic_keywords = false
-vim.cmd([[colorscheme gruvbox-flat]])
+vim.g.gruvbox_material_enable_italic_comment = false
+vim.cmd([[colorscheme gruvbox-material]])
 
 
