@@ -26,4 +26,5 @@ vim.o.background = "dark"                  -- light/dark
 vim.g.gruvbox_material_enable_italic_comment = false
 vim.cmd([[colorscheme gruvbox-material]])
 
-
+-- Define the 'Browse' command
+vim.cmd([[command! -nargs=1 Browse silent execute '!open' shellescape(<q-args>,1)]])
