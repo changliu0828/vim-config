@@ -15,6 +15,8 @@ require("mason-lspconfig").setup({
     "pyright",
     "html",
     "sqlls",
+    "yamlls",
+    "terraformls",
   },
 })
 
@@ -66,11 +68,11 @@ require("lspconfig").sqlls.setup {
   on_attach = on_attach,
   capabilities = capabilities,
 }
-require("lspconfig").tsserver.setup {
+require("lspconfig").yamlls.setup {
   on_attach = on_attach,
   capabilities = capabilities,
 }
-require("lspconfig").yamlls.setup {
+require("lspconfig").terraformls.setup {
   on_attach = on_attach,
   capabilities = capabilities,
 }
