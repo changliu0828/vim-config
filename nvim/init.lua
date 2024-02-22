@@ -10,6 +10,7 @@ require("plugins.cmp")
 require("plugins.symbols-outline")
 require("plugins.chatgpt")
 require("plugins.gitsigns")
+require("plugins.diffview")
 
 require("core.options")
 require("core.keymaps")

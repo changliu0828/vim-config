@@ -25,6 +25,7 @@ return require('packer').startup(function(use)
     use 'simrat39/symbols-outline.nvim'         -- outline
     use 'github/copilot.vim'                    -- copilot
     use 'lewis6991/gitsigns.nvim'               -- git signs
+    use "sindrets/diffview.nvim"                -- git diff
     use {
         'tpope/vim-fugitive',
         requires = { {'tpope/vim-rhubarb'} }
