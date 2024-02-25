@@ -44,7 +44,7 @@ require("nvim-tree").setup({
         enable = true,
     },
     view = {
-        width = 60,
+        width = 40,
     },
     renderer = {
         group_empty = true,
@@ -69,6 +69,7 @@ require("nvim-tree").setup({
        bufmap('c', api.fs.create, 'Create node')
        bufmap('<cr>', api.node.open.edit, 'Expand folder or go to file')
        bufmap('v', api.node.open.vertical, 'Open: Vertical Split')
+       bufmap('d', api.fs.remove, 'Delete node')
    end
 
 })

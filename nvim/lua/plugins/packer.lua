@@ -13,7 +13,6 @@ local packer_bootstrap = ensure_packer()
 
 return require('packer').startup(function(use)
     use 'wbthomason/packer.nvim'
-    use 'eddyekofo94/gruvbox-flat.nvim'         -- theme
     use 'wittyjudge/gruvbox-material.nvim'      -- theme
     use 'nvim-lualine/lualine.nvim'             -- status line
     use 'nvim-tree/nvim-tree.lua'               -- file navigation
@@ -44,6 +43,7 @@ return require('packer').startup(function(use)
         requires = {
             "MunifTanjim/nui.nvim",
             "nvim-lua/plenary.nvim",
+            "folke/trouble.nvim",
             "nvim-telescope/telescope.nvim"
         }
     })

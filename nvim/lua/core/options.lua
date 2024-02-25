@@ -22,7 +22,7 @@ vim.opt.termguicolors = true
 vim.opt.signcolumn = "yes"
 
 -- theme
-vim.o.background = "dark"                  -- light/dark
+-- vim.o.background = "dark"                  -- light/dark
 vim.g.gruvbox_material_enable_italic_comment = false
 vim.cmd([[colorscheme gruvbox-material]])
 
