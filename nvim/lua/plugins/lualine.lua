@@ -1,6 +1,6 @@
 require('lualine').setup {
   options = {
-    theme = 'gruvbox-flat'
+    theme = 'gruvbox-material',
   },
   sections = {
     lualine_a = {'mode'},
