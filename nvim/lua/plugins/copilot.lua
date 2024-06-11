@@ -4,3 +4,9 @@ vim.g.copilot_assume_mapped = true
 vim.g.copilot_tab_fallback = ""
 vim.api.nvim_set_keymap("i", "<F1>", 'copilot#Accept("<CR>")', { silent = true, expr = true })
 vim.g.copilot_filetypes = { yaml = true }
+
+require("CopilotChat").setup {
+  window = {
+    layout = 'horizontal'
+  }
+}

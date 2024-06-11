@@ -22,7 +22,11 @@ return require('packer').startup(function(use)
     use 'hrsh7th/cmp-path'                      -- path completion
     use 'hrsh7th/cmp-buffer'                    -- buffer completion
     use 'simrat39/symbols-outline.nvim'         -- outline
-    use 'github/copilot.vim'                    -- copilot
+    use 'zbirenbaum/copilot.lua'                -- copilot
+    use {
+        'CopilotC-Nvim/CopilotChat.nvim',       -- copilot chat
+        requires = { {'nvim-lua/plenary.nvim'}, {'zbirenbaum/copilot.lua'} }
+    }
     use 'lewis6991/gitsigns.nvim'               -- git signs
     use "sindrets/diffview.nvim"                -- git diff
     use {
