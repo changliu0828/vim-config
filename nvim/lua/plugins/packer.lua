@@ -38,15 +38,6 @@ return require('packer').startup(function(use)
         'williamboman/mason-lspconfig.nvim',
         'neovim/nvim-lspconfig'
     }
-    use({
-        "jackMort/ChatGPT.nvim",
-        requires = {
-            "MunifTanjim/nui.nvim",
-            "nvim-lua/plenary.nvim",
-            "folke/trouble.nvim",
-            "nvim-telescope/telescope.nvim"
-        }
-    })
 
     -- Automatically set up your configuration after cloning packer.nvim
     -- Put this at the end after all plugins
