@@ -1,6 +1,7 @@
 -- disable netrw at the very start of your init.lua (strongly advised)
 vim.g.loaded_netrw = 1
 vim.g.loaded_netrwPlugin = 1
+vim.g.nvim_tree_respect_buf_cwd = 1
 
 -- auto close https://github.com/nvim-tree/nvim-tree.lua/wiki/Auto-Close
 vim.api.nvim_create_autocmd("BufEnter", {
@@ -59,7 +60,7 @@ require("nvim-tree").setup({
         enable = true,
         update_cwd  = true,
     },
-   on_attach = function(bufnr)
+    on_attach = function(bufnr)
        local bufmap = function(lhs, rhs, desc)
            vim.keymap.set('n', lhs, rhs, {buffer = bufnr, desc = desc})
        end
